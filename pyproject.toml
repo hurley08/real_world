@@ -1,22 +1,24 @@
+# Python Real-World Projects
+# Project Zero: A template for other projects
+
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ["setuptools", "wheel"]  # PEP 508 specifications.
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "real_world"
-version = "0.1.0"
+name = "project_0"
+version = "1.0.0"
 description = "real_world template"
 readme = "README.md"
 authors = [
     {name = "Intri Desktop", email = "intriqet@outlook.com"},
 ]
-
+requires-python = ">=3.9"
 classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
 ]
-
 dependencies = [
     "alabaster==0.7.13",
     "babel==2.12.1",
@@ -62,21 +64,16 @@ dependencies = [
     "virtualenv==20.24.3",
     "wheel==0.40.0",
 ]
-requires-python = ">=3.10"
 [project.optional-dependencies]
 dev = [
+    # Development tools to work on this project
     "sphinx==7.2.2",
     "sphinxcontrib-plantuml==0.25",
     "pip-tools==7.3.0"
 ]
 test = [
+    # Testing tools to test this project
     "pytest==7.4.0",
     "tox==4.9.0",
     "behave==1.2.6"
 ]
-requires-python = ">=3.8"
-readme = "README.md"
-license = {text = "MIT"}
-
-[tool.pdm]
-distribution = true
